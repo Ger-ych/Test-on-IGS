@@ -8,10 +8,13 @@
 
 /* other styles */
 
-label {
-    cursor: pointer;
+.cover-container {
+    max-width: 64em!important;
 }
 
 .question {
     margin-bottom: 56px!important;
+}
+label {
+    cursor: pointer;
 }
