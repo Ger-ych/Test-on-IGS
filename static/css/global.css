@@ -1,0 +1,15 @@
+html, body {
+    height: 100vh;
+}
+
+.cover-container {
+    max-width: 48em;
+}
+
+.btn-secondary {
+    color: #000;
+}
+.btn-secondary:hover {
+    color: #000;
+}
+

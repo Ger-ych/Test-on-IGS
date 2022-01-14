@@ -1,0 +1,13 @@
+.main-test {
+    border-radius: 10px;
+    text-align: start!important;
+    color: #202428;
+}
+
+label {
+    cursor: pointer;
+}
+
+.question {
+    margin-bottom: 56px!important;
+}
