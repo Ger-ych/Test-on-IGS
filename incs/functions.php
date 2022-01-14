@@ -50,6 +50,7 @@ function getIp() {
   }
 }
 
+// Function for displaying the text of the answer option in the template in accordance with the "show_correct_answers" setting
 function printAnswerName($answer) {
   global $show_correct_answers;
 
@@ -61,6 +62,7 @@ function printAnswerName($answer) {
   }
 }
 
+// Getting a jumbled list of questions and answer options from a database
 function getQuestions($link) {
   $sql_request = "SELECT * FROM `questions`";
   $result = mysqli_query($link, $sql_request);
@@ -103,6 +105,7 @@ function getQuestions($link) {
   return $questions;
 }
 
+// Function for saving the test result to the database
 function saveResult($link, $percent_result){
   $user_ip = getIp();
   

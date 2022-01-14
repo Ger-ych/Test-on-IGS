@@ -1,10 +1,16 @@
+/* global style */
+
 html, body {
     height: 100vh;
 }
 
+/* style for cover */
+
 .cover-container {
     max-width: 48em;
 }
+
+/* style for buttons */
 
 .btn-secondary {
     color: #000;

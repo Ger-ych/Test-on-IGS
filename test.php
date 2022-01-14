@@ -1,7 +1,9 @@
 <?php
+    // Connecting the necessary functionality from third-party files
     require_once __DIR__ . '/incs/functions.php';
     require_once 'incs/database.php';
 
+    // Getting a mixed list of questions and answer options from the database
     $questions = getQuestions($link);
 
     // debug($questions);
@@ -56,8 +58,8 @@
                                 <input type='radio' form='test-form' id='question".$q['id']."_Choice3' name='".$q['id']."' value='".$q['answers'][3]['text']."'>
                                 <label for='question".$q['id']."_Choice3'>".printAnswerName($q['answers'][3])."</label>
                             </div>
-                        </div>
-                    </div>
+                        </div><!-- /.d-flex -->
+                    </div><!-- /.question -->
                     ";
                 }
             ?>
@@ -69,7 +71,7 @@
         </main>
 
       <?php require "snippets/footer.php" ?>
-    </div>
+    </div><!-- /.cover-container -->
     
     <!-- JS -->
     <?php require "snippets/body/default_js_connection.php" ?>

@@ -1,13 +1,18 @@
 <?php
+    // Connecting the necessary functionality from third-party files
     require_once __DIR__ . '/incs/functions.php';
     require_once 'incs/database.php';
-
+    
+    // Getting a list of questions and answer options from the database
     $questions = getQuestions($link);
     
+    // Checking the request method
     if($_SERVER['REQUEST_METHOD'] == "POST") {
+        // Declaring variables to generate result statistics
         $quantity_correct_answers = 0;
         $quantity_all_answers = count($questions);
 
+        // Iterate over questions and check for correct answers
         foreach ($questions as $q) {
             if(key_exists($q['id'], $_POST)) {
                 $answer_text = $_POST[$q['id']];
@@ -21,15 +26,18 @@
             }
         }
 
+        // Calculation of the percentage of correct answers
         $correct_percent = $quantity_correct_answers / $quantity_all_answers * 100;
 
         // echo $quantity_correct_answers;
         // echo $quantity_all_answers;
         // echo $correct_percent;
 
+        // Saving the result to the database
         saveResult($link, $correct_percent);
     }
     else {
+        // If the request method is not POST, then return the error "405 Method Not Allowed"
         echo "<h1>Метод не поддерживается! <a href='/'>На главную</a></h1>";
         exit(header('HTTP/1.0 405 Method Not Allowed'));
     }
@@ -60,7 +68,7 @@
 
             <div class="progress mt-3" style="height: 20px;">
                 <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-            </div>
+            </div><!-- /.progress -->
 
             <p class="lead mt-4">
             <a href="/" class="btn btn-md btn-dark fw-bold">На главную »</a>
@@ -68,7 +76,7 @@
         </main>
 
       <?php require "snippets/footer.php" ?>
-    </div>
+    </div><!-- /.cover-container -->
     
     <!-- JS -->
     <?php require "snippets/body/default_js_connection.php" ?>

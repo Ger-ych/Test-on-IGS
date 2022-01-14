@@ -20,7 +20,7 @@
             <div class="animate__animated animate__backInDown">
             <h1>Интерактивные графические системы.</h1>
             <p class="lead">Проверьте свои знания на данную тему и пройдите тест, нажав на кнопку ниже. После успешного прохождения Вы сможете увидеть результат (он будет виден только администраторам).</p>
-            </div>
+            </div><!-- /.animate__animated -->
             
             <p class="lead animate__animated animate__backInUp">
                 <a href="/test.php" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Начать тестирование</a>
@@ -28,7 +28,7 @@
         </main>
 
       <?php require "snippets/footer.php" ?>
-    </div>
+    </div><!-- /.cover-container -->
     
     <!-- JS -->
     <?php require "snippets/body/default_js_connection.php" ?>

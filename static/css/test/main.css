@@ -1,8 +1,12 @@
+/* style for <main> */
+
 .main-test {
     border-radius: 10px;
     text-align: start!important;
     color: #202428;
 }
+
+/* other styles */
 
 label {
     cursor: pointer;
