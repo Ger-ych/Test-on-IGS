@@ -28,6 +28,7 @@
 
         // Calculation of the percentage of correct answers
         $correct_percent = $quantity_correct_answers / $quantity_all_answers * 100;
+        $correct_percent = (int) $correct_percent;
 
         // echo $quantity_correct_answers;
         // echo $quantity_all_answers;

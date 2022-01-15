@@ -2,7 +2,7 @@
 
 // Settings
 
-$show_correct_answers = 0;
+$show_correct_answers = 1;
 
 
 // Function for outputting data for convenient application debugging
